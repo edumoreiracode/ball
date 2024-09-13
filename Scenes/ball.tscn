@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmbgtba5q2qei"]
+
+[ext_resource type="Texture2D" uid="uid://b3bosp6okds22" path="res://Sprites/ball.svg" id="1_yhvau"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2uvmb"]
+bounce = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q02uy"]
+radius = 50.01
+
+[node name="ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_2uvmb")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yhvau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q02uy")
